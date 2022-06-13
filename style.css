@@ -4,10 +4,13 @@
   margin: 0;
   padding: 0;
   font-family: 'Bebas Neue';
+  text-decoration: none;
+  color: #EEE;
   border: 1px solid red;
 }
 
 body {
+  background: #333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,6 +37,21 @@ h1 {
   justify-content: space-evenly;
 }
 
+.computer, .player {
+  margin: 1rem;
+  min-width: 10rem;
+  min-height: 10rem;
+  text-align: center;
+}
+
+#playerDisplay {
+  font-size: 5rem;
+}
+
+.playerDisplayRotate {
+  transform: scaleX(-1) rotate(-90deg);
+}
+
 .choices {
   display: flex;
 }
@@ -45,4 +63,29 @@ h1 {
 
 #scissors, #rock {
   transform: scaleX(-1) rotate(-90deg);
+}
+
+footer {
+  width: 100%;
+  background: #EEE;
+  position: absolute;
+  bottom: 0;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: #333;
+}
+
+.github {
+  background: url("githubIcon.png") no-repeat;
+  background-size: 100%;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 .5rem;
 }
