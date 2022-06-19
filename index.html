@@ -12,29 +12,33 @@
 
 <body>
   <h1>Rock Paper Scissors</h1>
-  <h2>First to 5 wins</h2>
   <div class="game">
 
     <div class="display">
       <div class="player">
-        <p>You: 0</p>
+        <p id="playerScore">You: 0</p>
         <div id="playerDisplay"></div>
       </div>
 
       <div class="computer">
-        <p>Computer: 0</p>
+        <p id="computerScore">Computer: 0</p>
         <div id="computerDisplay"></div>
       </div>
     </div>
 
-    <p id="resultText">Lorem ipsum dolor sit</p>
+    <p id="resultText">First to 5 wins!</p>
 
-    <p>Choose:</p>
+    <p class="choose">Choose:</p>
     <div class="choices">
-      <div id="rock">✊</div>
-      <div id="paper">🫱</div>
-      <div id="scissors">✌️</div>
+      <div id="rock"></div>
+      <div id="paper"></div>
+      <div id="scissors"></div>
     </div>
+  </div>
+
+  <div id="gameOver">
+    <p id="gameOverText"></p>
+    <button id="playAgain">Play Again</button>
   </div>
 
   <footer>

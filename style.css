@@ -6,7 +6,7 @@
   font-family: 'Bebas Neue';
   text-decoration: none;
   color: #EEE;
-  border: 1px solid red;
+  border: none;
 }
 
 body {
@@ -19,11 +19,13 @@ body {
 
 h1 {
   font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 .game {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -37,6 +39,21 @@ h1 {
   justify-content: space-evenly;
 }
 
+.rock {
+  background: url("pics/rock.png") no-repeat center;
+  background-size: 100%;
+}
+
+.paper {
+  background: url("pics/paper.png") no-repeat center;
+  background-size: 100%;
+}
+
+.scissors {
+  background: url("pics/scissors.png") no-repeat center;
+  background-size: 100%;
+}
+
 .computer, .player {
   margin: 1rem;
   min-width: 10rem;
@@ -44,25 +61,86 @@ h1 {
   text-align: center;
 }
 
-#playerDisplay {
-  font-size: 5rem;
+#playerScore,
+#computerScore {
+  border-bottom: 1px solid #EEE;
+  margin: 0 1rem 0 1rem;
 }
 
-.playerDisplayRotate {
-  transform: scaleX(-1) rotate(-90deg);
+#playerDisplay,
+#computerDisplay {
+  width: 10rem;
+  height: 10rem;
+}
+
+#computerDisplay {
+  transform: scaleX(-1);
+}
+
+.choose {
+  margin-top: 5rem;
+}
+
+#rock {
+  background: url("pics/rock.png") no-repeat center;
+  background-size: 100%;
+}
+
+#paper {
+  background: url("pics/paper.png") no-repeat center;
+  background-size: 100%;
+}
+
+#scissors {
+  background: url("pics/scissors.png") no-repeat center;
+  background-size: 100%;
 }
 
 .choices {
   display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .choices div {
-  margin: 0 1rem;
+  width: 5rem;
+  height: 10rem;
   font-size: 5rem;
+  cursor: pointer;
 }
 
-#scissors, #rock {
-  transform: scaleX(-1) rotate(-90deg);
+#gameOver {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#gameOver.active {
+  display: flex;
+}
+
+#gameOverText {
+  font-size: 4rem;
+}
+
+#playAgain {
+  color: #333;
+  font-size: 4rem;
+  min-width: 50%;
+  height: 7rem;
+  background: #961c1c;
+  box-shadow: 5px 5px 5px #000;
+  border-radius: 20px;
 }
 
 footer {
@@ -83,7 +161,7 @@ footer p {
 }
 
 .github {
-  background: url("githubIcon.png") no-repeat;
+  background: url("pics/githubIcon.png") no-repeat;
   background-size: 100%;
   width: 1rem;
   height: 1rem;
