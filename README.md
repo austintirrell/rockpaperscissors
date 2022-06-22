@@ -1,4 +1,4 @@
-# rockpaperscissors
+# Rock Paper Scissors
 
 ## [Live Preview](https://austintirrell.github.io/rockpaperscissors)
 
